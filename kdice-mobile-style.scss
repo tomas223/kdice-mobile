@@ -1,0 +1,65 @@
+*, :after, :before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+$main-width: 610px;
+
+#page {
+  width: fit-content;
+  width: inherit;
+}
+
+#page #hd {
+  width: $main-width;
+
+  & > div > table {
+    width: inherit !important;
+  }
+}
+#page #hd > div > table > tbody > tr > td:nth-child(2) {
+  display: none;
+}
+
+#outside {
+  width: $main-width;
+  #all {
+    width: inherit;
+    min-width: inherit;
+  }
+
+  & > div:last-of-type {
+    display: none;
+  }
+
+  #bd {
+    display: flex;
+    flex-flow: column-reverse;
+
+    #yui-main > .yui-b {
+      margin-right: 0;
+    }
+  }
+}
+
+#KGame {
+  .iogc-GameWindow-table {
+    height: inherit
+  }
+
+  table.iogc-TableLayout > tbody > tr {
+    display: flex;
+    flex-flow: row wrap;
+
+    & > td:nth-child(1) {
+
+    }
+    & > td:nth-child(2) {
+      order: 2;
+    }
+
+    & > td:nth-child(3) {
+      order: 1;
+    }
+  }
+}

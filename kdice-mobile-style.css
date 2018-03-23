@@ -1,0 +1,40 @@
+*, :after, :before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+#page {
+  width: fit-content;
+  width: inherit; }
+
+#page #hd {
+  width: 610px; }
+  #page #hd > div > table {
+    width: inherit !important; }
+
+#page #hd > div > table > tbody > tr > td:nth-child(2) {
+  display: none; }
+
+#outside {
+  width: 610px; }
+  #outside #all {
+    width: inherit;
+    min-width: inherit; }
+  #outside > div:last-of-type {
+    display: none; }
+  #outside #bd {
+    display: flex;
+    flex-flow: column-reverse; }
+    #outside #bd #yui-main > .yui-b {
+      margin-right: 0; }
+
+#KGame .iogc-GameWindow-table {
+  height: inherit; }
+#KGame table.iogc-TableLayout > tbody > tr {
+  display: flex;
+  flex-flow: row wrap; }
+  #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(2) {
+    order: 2; }
+  #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(3) {
+    order: 1; }
+
+/*# sourceMappingURL=kdice-mobile-style.css.maps.map */
