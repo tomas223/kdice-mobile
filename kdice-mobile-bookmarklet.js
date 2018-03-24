@@ -6,10 +6,10 @@ javascript:(function () {
 
     const m = document.createElement('meta');
     m.setAttribute('name', 'viewport');
-    m.setAttribute('content', 'width=device-width,initial-scale=1,shrink-to-fit=no');
+    m.setAttribute('content', 'width=615,shrink-to-fit=yes');
 
     document.getElementsByTagName('head')[0].appendChild(m);
     document.getElementsByTagName('head')[0].appendChild(s);
 
-    console.log("Custom CSS stylesheet injected");
+    console.log('Custom CSS stylesheet injected');
 })();
