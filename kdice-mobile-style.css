@@ -3,8 +3,8 @@
   -webkit-box-sizing: border-box; }
 
 #page {
-  width: fit-content;
-  width: inherit; }
+  width: inherit;
+  width: fit-content; }
 
 #page #hd {
   width: 610px; }
