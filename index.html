@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+
+    <title>kdice.com mobile friendly bookmarklet</title>
+    <meta name="description" content="Converts kdice.com to more mobile-friendly version">
+    <meta name="author" content="Tomas Hornak">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+
+</head>
+<body>
+<main style="max-width: 600px; margin: 30px auto 0">
+    <h2>kdice.com mobile friendly bookmarklet</h2>
+    <h3><b>How to add bookmarklet to computer browser</b></h3>
+
+    <p>You can drag and drop following bookmarklet to your bookmarks bar</p>
+    <a class="button" href="javascript:(function () {
+    const s = document.createElement('link');
+    s.setAttribute('href', 'https://rawgit.com/tomas223/kdice-mobile/master/kdice-mobile-style.css');
+    s.setAttribute('rel', 'stylesheet');
+    s.setAttribute('type', 'text/css');
+
+    const m = document.createElement('meta');
+    m.setAttribute('name', 'viewport');
+    m.setAttribute('content', 'width=device-width,initial-scale=1,shrink-to-fit=no');
+
+    document.getElementsByTagName('head')[0].appendChild(m);
+    document.getElementsByTagName('head')[0].appendChild(s);
+
+    console.log('Custom CSS stylesheet injected');
+    })();">
+        kdice mobile
+    </a>
+    <p>Then you can open <a href="//kdice.com">kdice.com</a> and click on new bookmark. Now you should see kdice in
+        mobile-friendly version</p>
+
+    <h3><b>How to add bookmarklet to mobile browser</b></h3>
+    <h4>1. You have your bookmarks synchronised between your chrome browsers or apple devices</h4>
+    <p>If you added your bookmarks to your PC browser just go to <a href="//kdice.com">kdice.com</a> on your phone's
+        Chrome/Safari and then start typing do address bar 'kdice mobile' and you should see javascript bookmarklet
+    </p>
+    <h4>2. You DON'T have your bookmarks synchronised between your chrome browsers or apple devices</h4>
+    <p>Google something like:</p>
+    <blockquote>how to add bookmarklet to android / ios browser</blockquote>
+</main>
+
+</body>
+</html>
