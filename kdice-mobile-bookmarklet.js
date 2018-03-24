@@ -1,6 +1,6 @@
 javascript:(function () {
     const s = document.createElement('link');
-    s.setAttribute('href', 'https://cdn.rawgit.com/tomas223/kdice-mobile/c53d6853/kdice-mobile-style.css');
+    s.setAttribute('href', 'https://cdn.rawgit.com/tomas223/kdice-mobile/cbfc6148/styles/kdice-mobile-style.css');
     s.setAttribute('rel', 'stylesheet');
     s.setAttribute('type', 'text/css');
 
