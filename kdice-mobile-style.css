@@ -20,7 +20,14 @@
     width: inherit;
     min-width: inherit; }
   #outside > div:last-of-type {
-    display: none; }
+    width: inherit !important; }
+    #outside > div:last-of-type > table > tbody > tr {
+      display: flex;
+      flex-flow: wrap; }
+      #outside > div:last-of-type > table > tbody > tr > td:first-child {
+        width: 100%; }
+      #outside > div:last-of-type > table > tbody > tr > td:not(:first-child) {
+        width: 49%; }
   #outside #bd {
     display: flex;
     flex-direction: column-reverse; }
@@ -29,13 +36,15 @@
     #outside #bd #menu-out {
       width: 100%;
       margin: 0;
-      padding: 0 10px; }
-      #outside #bd #menu-out #iogc-PlayerPanel {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between; }
-        #outside #bd #menu-out #iogc-PlayerPanel > div {
-          width: 42% !important; }
+      padding: 15px 10px 0; }
+      #outside #bd #menu-out #menu {
+        margin-bottom: 0; }
+        #outside #bd #menu-out #menu #iogc-PlayerPanel {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between; }
+          #outside #bd #menu-out #menu #iogc-PlayerPanel > div {
+            width: 42% !important; }
 
 #KGame {
   height: inherit !important; }
@@ -45,6 +54,8 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between; }
+    #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(1):after {
+      content: '&#8627;'; }
     #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(2) {
       order: 2; }
     #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(3) {

@@ -29,8 +29,20 @@ $main-width: 610px;
     min-width: inherit;
   }
 
+  //footer
   & > div:last-of-type {
-    display: none;
+    width: inherit !important;
+
+    & > table > tbody > tr {
+      display: flex;
+      flex-flow: wrap;
+      & > td:first-child {
+        width: 100%;
+      }
+      & > td:not(:first-child) {
+        width: 49%;
+      }
+    }
   }
 
   #bd {
@@ -46,21 +58,22 @@ $main-width: 610px;
     #menu-out {
       width: 100%;
       margin: 0;
-      padding: 0 10px;
+      padding: 15px 10px 0;
 
-      #iogc-PlayerPanel {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+      #menu {
+        margin-bottom: 0;
 
-        & > div {
-          width: 42% !important;
+        #iogc-PlayerPanel {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          & > div {
+            width: 42% !important;
+          }
         }
       }
     }
-
-
-
   }
 }
 
@@ -76,7 +89,9 @@ $main-width: 610px;
     justify-content: space-between;
 
     & > td:nth-child(1) {
-
+      &:after {
+        content: '&#8627;';
+      }
     }
     & > td:nth-child(2) {
       order: 2;
