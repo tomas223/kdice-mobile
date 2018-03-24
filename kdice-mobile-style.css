@@ -23,18 +23,33 @@
     display: none; }
   #outside #bd {
     display: flex;
-    flex-flow: column-reverse; }
+    flex-direction: column-reverse; }
     #outside #bd #yui-main > .yui-b {
       margin-right: 0; }
+    #outside #bd #menu-out {
+      width: 100%;
+      margin: 0;
+      padding: 0 10px; }
+      #outside #bd #menu-out #iogc-PlayerPanel {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+        #outside #bd #menu-out #iogc-PlayerPanel > div {
+          width: 42% !important; }
 
-#KGame .iogc-GameWindow-table {
-  height: inherit; }
-#KGame table.iogc-TableLayout > tbody > tr {
-  display: flex;
-  flex-flow: row wrap; }
-  #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(2) {
-    order: 2; }
-  #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(3) {
-    order: 1; }
+#KGame {
+  height: inherit !important; }
+  #KGame .iogc-GameWindow-table {
+    height: inherit; }
+  #KGame table.iogc-TableLayout > tbody > tr {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+    #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(2) {
+      order: 2; }
+    #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(3) {
+      order: 1; }
+    #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(1) > table > tbody, #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(3) > table > tbody {
+      display: flex; }
 
-/*# sourceMappingURL=kdice-mobile-style.css.maps.map */
+/*# sourceMappingURL=kdice-mobile-style.css.map */

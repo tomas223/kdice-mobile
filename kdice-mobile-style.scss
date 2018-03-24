@@ -17,6 +17,7 @@ $main-width: 610px;
     width: inherit !important;
   }
 }
+
 #page #hd > div > table > tbody > tr > td:nth-child(2) {
   display: none;
 }
@@ -34,15 +35,37 @@ $main-width: 610px;
 
   #bd {
     display: flex;
-    flex-flow: column-reverse;
+    flex-direction: column-reverse;
 
+    // game
     #yui-main > .yui-b {
       margin-right: 0;
     }
+
+    // player menu
+    #menu-out {
+      width: 100%;
+      margin: 0;
+      padding: 0 10px;
+
+      #iogc-PlayerPanel {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        & > div {
+          width: 42% !important;
+        }
+      }
+    }
+
+
+
   }
 }
 
 #KGame {
+  height: inherit !important;
   .iogc-GameWindow-table {
     height: inherit
   }
@@ -50,6 +73,7 @@ $main-width: 610px;
   table.iogc-TableLayout > tbody > tr {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
 
     & > td:nth-child(1) {
 
@@ -61,5 +85,14 @@ $main-width: 610px;
     & > td:nth-child(3) {
       order: 1;
     }
+
+    & > td:nth-child(1), & > td:nth-child(3) {
+      & > table > tbody {
+        display: flex;
+      }
+    }
+
   }
 }
+
+
