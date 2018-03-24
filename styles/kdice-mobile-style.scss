@@ -10,16 +10,14 @@ $main-width: 610px;
   width: fit-content;
 }
 
+// Kdice header logo and ads
 #page #hd {
   width: $main-width;
+  overflow: hidden;
 
   & > div > table {
     width: inherit !important;
   }
-}
-
-#page #hd > div > table > tbody > tr > td:nth-child(2) {
-  display: none;
 }
 
 #outside {
@@ -36,6 +34,8 @@ $main-width: 610px;
     & > table > tbody > tr {
       display: flex;
       flex-flow: wrap;
+      justify-content: space-between;
+
       & > td:first-child {
         width: 100%;
       }
@@ -89,8 +89,20 @@ $main-width: 610px;
     justify-content: space-between;
 
     & > td:nth-child(1) {
+      position: relative;
+
+      & > table > tbody {
+        display: flex;
+        flex-direction: row-reverse;
+      }
       &:after {
-        content: '&#8627;';
+        content: '\21B3';
+        position: absolute;
+        right: -30px;
+        top: 34%;
+        font-size: 50px;
+        font-weight: 600;
+        color: #777;
       }
     }
     & > td:nth-child(2) {
@@ -99,14 +111,21 @@ $main-width: 610px;
 
     & > td:nth-child(3) {
       order: 1;
-    }
+      position: relative;
 
-    & > td:nth-child(1), & > td:nth-child(3) {
       & > table > tbody {
         display: flex;
       }
+      &:before {
+        content: '\21B1';
+        position: absolute;
+        left: -30px;
+        top: 34%;
+        font-size: 50px;
+        font-weight: 600;
+        color: #777;
+      }
     }
-
   }
 }
 

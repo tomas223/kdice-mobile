@@ -7,12 +7,10 @@
   width: fit-content; }
 
 #page #hd {
-  width: 610px; }
+  width: 610px;
+  overflow: hidden; }
   #page #hd > div > table {
     width: inherit !important; }
-
-#page #hd > div > table > tbody > tr > td:nth-child(2) {
-  display: none; }
 
 #outside {
   width: 610px; }
@@ -23,7 +21,8 @@
     width: inherit !important; }
     #outside > div:last-of-type > table > tbody > tr {
       display: flex;
-      flex-flow: wrap; }
+      flex-flow: wrap;
+      justify-content: space-between; }
       #outside > div:last-of-type > table > tbody > tr > td:first-child {
         width: 100%; }
       #outside > div:last-of-type > table > tbody > tr > td:not(:first-child) {
@@ -54,13 +53,33 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between; }
-    #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(1):after {
-      content: '&#8627;'; }
+    #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(1) {
+      position: relative; }
+      #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(1) > table > tbody {
+        display: flex;
+        flex-direction: row-reverse; }
+      #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(1):after {
+        content: '\21B3';
+        position: absolute;
+        right: -30px;
+        top: 34%;
+        font-size: 50px;
+        font-weight: 600;
+        color: #777; }
     #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(2) {
       order: 2; }
     #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(3) {
-      order: 1; }
-    #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(1) > table > tbody, #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(3) > table > tbody {
-      display: flex; }
+      order: 1;
+      position: relative; }
+      #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(3) > table > tbody {
+        display: flex; }
+      #KGame table.iogc-TableLayout > tbody > tr > td:nth-child(3):before {
+        content: '\21B1';
+        position: absolute;
+        left: -30px;
+        top: 34%;
+        font-size: 50px;
+        font-weight: 600;
+        color: #777; }
 
-/*# sourceMappingURL=kdice-mobile-styles.css.map */
+/*# sourceMappingURL=kdice-mobile-style.css.map */
