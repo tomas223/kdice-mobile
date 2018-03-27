@@ -19,7 +19,10 @@
     <h3><b>How to add bookmarklet to computer browser</b></h3>
 
     <p>You can drag and drop following bookmarklet to your bookmarks bar</p>
-    <a class="button" href="javascript:(function () {
+    <a
+            class="button"
+            href="javascript:(function () {
+    /* Adds CSS script and viewport meta tags into html head */
     const s = document.createElement('link');
     s.setAttribute('href', 'https://rawgit.com/tomas223/kdice-mobile/master/styles/kdice-mobile-style.css');
     s.setAttribute('rel', 'stylesheet');
@@ -32,19 +35,48 @@
     document.getElementsByTagName('head')[0].appendChild(m);
     document.getElementsByTagName('head')[0].appendChild(s);
 
-    console.log('Custom CSS stylesheet injected');
+    /* Adds auto end-turn checkbox */
+    const btn = document.querySelector('.iogc-Controls button');
+
+    const lbl = document.createElement('label');
+    const txt = document.createTextNode('Auto End-Turn');
+    const chckbx = document.createElement('input');
+    chckbx.setAttribute('type', 'checkbox');
+    lbl.appendChild(chckbx);
+    lbl.appendChild(txt);
+
+    document.querySelector('.iogc-Controls').appendChild(lbl);
+
+    const btnObserver = new MutationObserver((mutationsList) => {
+    for (let mutation of mutationsList) {
+    if (
+    mutation.attributeName === 'aria-hidden'
+    && btn.getAttribute('aria-hidden') === null
+    && chckbx.checked
+    ) {
+    setTimeout(() => btn.click(), 100);
+    }
+    }
+    });
+
+    btnObserver.observe(btn, { attributes: true });
+
+    console.log('custom Kdice mobile script injected');
     })();">
         kdice mobile
     </a>
-    <p>Then you can open <a target="_blank" href="//kdice.com">kdice.com</a> and click on new bookmark. Now you should see kdice in
+    <p>Then you can open <a target="_blank" href="//kdice.com">kdice.com</a> and click on new bookmark. Now you should
+        see kdice in
         mobile-friendly version</p>
 
     <h3><b>How to add bookmarklet to mobile browser</b></h3>
-    <h4><b>1.</b> You <strong>have</strong> your bookmarks automatically synchronised between your chrome browsers or apple devices</h4>
+    <h4><b>1.</b> You <strong>have</strong> your bookmarks automatically synchronised between your chrome browsers or
+        apple devices</h4>
     <p>If you added your bookmarks to your PC browser just go to <a href="//kdice.com">kdice.com</a> on your phone's
         Chrome/Safari and then start typing do address bar 'kdice mobile' and you should see javascript bookmarklet
     </p>
-    <h4><b>2.</b> You <strong>DON'T have</strong> your bookmarks automatically synchronised between your chrome browsers or apple devices</h4>
+    <h4><b>2.</b> You <strong>DON'T have</strong> your bookmarks automatically synchronised between your chrome browsers
+        or apple devices</h4>
     <p><a href="//google.com" target="_blank">Google</a> something like:</p>
     <blockquote>how to add bookmarklet to android / ios browser</blockquote>
 </main>

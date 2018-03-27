@@ -82,4 +82,10 @@
         font-weight: 600;
         color: #777; }
 
+.iogc-Controls {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding-right: 0; }
+
 /*# sourceMappingURL=kdice-mobile-style.css.map */

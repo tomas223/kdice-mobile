@@ -129,4 +129,13 @@ $main-width: 610px;
   }
 }
 
+// Auto end turn button
+
+.iogc-Controls {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding-right: 0;
+}
+
 
